@@ -257,3 +257,65 @@ body {
     left: 100px;
     color: red;
 }
+
+
+/* submit.html */
+#qadeer {
+    overflow: hidden;
+}
+
+.main23 {
+    background-color: #4267B2 !important;
+    height: 660px;
+}
+
+.submit23 {
+    background-color: white;
+    position: relative;
+    top: 100px;
+    left: 220px;
+    width: 580px;
+    height: 390px;
+    border-radius: 10px;
+}
+
+.submit23 i {
+    font-size: 140px;
+    position: relative;
+    top: 20px;
+    left: 218px;
+    color: #34B7F1;
+}
+
+#heading1 {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    top: 40px;
+    left: 188px;
+    color: #3f729b;
+}
+
+.submit23 h3 {
+    font-family: 'Baloo Bhai 2', cursive;
+    position: relative;
+    top: 20px;
+    left: 70px;
+    color: #3f729b;
+}
+
+.submit23 h4 {
+    font-family: 'Baloo Bhai 2', cursive;
+    position: relative;
+    left: 180px;
+}
+
+.submit23 h4 a {
+    /* text-decoration: none; */
+    position: relative;
+    left: 50px;
+}
+
+.iron {
+    position: relative;
+    left: -5px;
+}

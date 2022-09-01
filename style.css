@@ -216,3 +216,44 @@ body {
     left: 100px;
     width: 870px;
 }
+
+/* validation */
+#span {
+    position: relative;
+    top: 0px;
+    left: 100px;
+    color: red;
+}
+
+#span1 {
+    color: red;
+}
+
+#span2 {
+    position: relative;
+    top: 0px;
+    left: 100px;
+    color: red;
+}
+
+#span3 {
+    color: red;
+}
+
+#span4 {
+    position: relative;
+    top: 0px;
+    left: 100px;
+    color: red;
+}
+
+#span5 {
+    color: red;
+}
+
+#span6 {
+    position: relative;
+    top: 0px;
+    left: 100px;
+    color: red;
+}

@@ -310,9 +310,13 @@ body {
 }
 
 .submit23 h4 a {
-    /* text-decoration: none; */
+    text-decoration: none;
     position: relative;
     left: 50px;
+}
+
+.submit23 h4 a:hover {
+    text-decoration: underline;
 }
 
 .iron {

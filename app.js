@@ -89,3 +89,32 @@ submit = () => {
     date.value = "";
     address.value = " ";
 }
+
+
+login = () => {
+    // userName
+    let userName = document.getElementById("userName");
+    let span10 = document.getElementById("span10");
+    let userNameRegix = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/.test(userName.value);
+
+    // Password
+    let password = document.getElementById("password");
+    let span11 = document.getElementById("span11");
+    let passwordRegex = /^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9]{7,}$/.test(password.value);
+    // console.log(passwordRegex);
+
+    // userName
+    if (userNameRegix === false) {
+        // userName.style.border = "2px solid red";
+        span10.innerHTML = "Please valid Email address"
+    }
+
+    // password
+    else if (passwordRegex === false) {
+        span11.innerHTML = "Password Should have must be 8 letter"
+    }
+
+
+    userName.value = "";
+    password.value = "";
+}

@@ -1,3 +1,4 @@
+let arr = [];
 submit = () => {
     // full name 
     let fullName = document.getElementById("fullName");
@@ -33,6 +34,17 @@ submit = () => {
     let address = document.getElementById("address");
     let span6 = document.getElementById("span6");
     let addressRegex = /^\s*$/.test(address.value);
+
+    arr.push({
+        Name: fullName.value,
+        Fathername: fatherName.value,
+        Email: email.value,
+        Phone: phone.value,
+        CNIC: cnic.value,
+        Dateofbirth: date.value,
+        Address: address.value
+    });
+    localStorage.setItem("Students", JSON.stringify(arr));
 
     // full name 
     if (fullNameRegix === true) {
@@ -114,7 +126,18 @@ login = () => {
         span11.innerHTML = "Password Should have must be 8 letter"
     }
 
+    else if (userNameRegix === true && passwordRegex === true) {
+        window.location.href = "./local.html"
+    }
+
 
     userName.value = "";
     password.value = "";
 }
+
+
+// '.tbl-content' consumed little space for vertical scrollbar, scrollbar width depend on browser/os/platfrom. Here calculate the scollbar width .
+$(window).on("load resize ", function () {
+    var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+    $('.tbl-header').css({ 'padding-right': scrollWidth });
+}).resize();

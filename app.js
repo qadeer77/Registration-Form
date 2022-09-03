@@ -1,3 +1,4 @@
+let tableRow = document.getElementById("tableRow");
 let arr = [];
 submit = () => {
     // full name 
@@ -35,16 +36,32 @@ submit = () => {
     let span6 = document.getElementById("span6");
     let addressRegex = /^\s*$/.test(address.value);
 
-    arr.push({
-        Name: fullName.value,
-        Fathername: fatherName.value,
-        Email: email.value,
-        Phone: phone.value,
-        CNIC: cnic.value,
-        Dateofbirth: date.value,
-        Address: address.value
-    });
+        arr.push({
+            Name: fullName.value,
+            Fathername: fatherName.value,
+            Email: email.value,
+            Phone: phone.value,
+            CNIC: cnic.value,
+            Dateofbirth: date.value,
+            Address: address.value
+        });
     localStorage.setItem("Students", JSON.stringify(arr));
+    
+        
+
+
+    
+
+    // let row = `
+    //     <tr>${arr.}</tr>
+    //     <tr>${fatherName.value}</tr>
+    //     <tr>${email.value}</tr>
+    //     <tr>${phone.value}</tr>
+    //     <tr>${cnic.value}</tr>
+    //     <tr>${date.value}</tr>
+    //     <tr>${address.value}</tr>
+    // `
+    
 
     // full name 
     if (fullNameRegix === true) {
@@ -136,8 +153,8 @@ login = () => {
 }
 
 
-// '.tbl-content' consumed little space for vertical scrollbar, scrollbar width depend on browser/os/platfrom. Here calculate the scollbar width .
-$(window).on("load resize ", function () {
-    var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
-    $('.tbl-header').css({ 'padding-right': scrollWidth });
-}).resize();
+// // '.tbl-content' consumed little space for vertical scrollbar, scrollbar width depend on browser/os/platfrom. Here calculate the scollbar width .
+// $(window).on("load resize ", function () {
+//     var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+//     $('.tbl-header').css({ 'padding-right': scrollWidth });
+// }).resize();

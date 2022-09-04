@@ -1,4 +1,16 @@
 /* local html */
+#icon1 {
+    position: relative;
+    left: 15px;
+    top: 5px;
+}
+
+#icon2 {
+    position: relative;
+    left: 20px;
+    top: 5px;
+}
+
 .table {
     background-color: #4267B2 !important;
     overflow-x: hidden;

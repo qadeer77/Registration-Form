@@ -1,8 +1,36 @@
 let arr = [];
+let tableRow1 = localStorage.getItem("tableRow");
+if (tableRow1) {
+    arr = JSON.parse(tableRow1);
+}
+
+let tr = document.getElementById("tr");
+
+if (tr !== null) {
+    loadAll = () => {
+        tr.innerHTML = " ";
+        for (let i = 0; i < arr.length; i++) {
+            for (let key in arr) {
+                let row = `
+                    <tr>
+                    <td>${arr[i].Name} <br> <i onclick="delete1();" id="icon1" class="fa-solid fa-trash"></i> <i id="icon2" class="fa-solid fa-pen-to-square"></i></td>
+                    <td>${arr[i].Fathername}<br> <i onclick="delete1();" id="icon1" class="fa-solid fa-trash"></i> <i id="icon2" class="fa-solid fa-pen-to-square"></i></td>
+                    <td>${arr[i].Email} <br> <i onclick="delete1();" id="icon1" class="fa-solid fa-trash"></i> <i id="icon2" class="fa-solid fa-pen-to-square"></i></td>
+                    <td>${arr[i].Phone} <br> <i onclick="delete1);" id="icon1" class="fa-solid fa-trash"></i> <i id="icon2" class="fa-solid fa-pen-to-square"></i></td>
+                    <td>${arr[i].CNIC} <br> <i onclick="delete1();" id="icon1" class="fa-solid fa-trash"></i> <i id="icon2" class="fa-solid fa-pen-to-square"></i></td>
+                    <td>${arr[i].Dateofbirth} <br> <i onclick="delete1();" id="icon1" class="fa-solid fa-trash"></i> <i id="icon2" class="fa-solid fa-pen-to-square"></i></td>
+                    <td>${arr[i].Address}<br> <i onclick="delete1();" id="icon1" class="fa-solid fa-trash"></i> <i id="icon2" class="fa-solid fa-pen-to-square"></i></td>
+                    </tr>
+                    `
+                tr.innerHTML += row
+            }
+        }
+    }
+    loadAll();
+}
+
+
 submit = () => {
-
-
-
     // full name 
     let fullName = document.getElementById("fullName");
     let span = document.getElementById("span");
@@ -48,6 +76,7 @@ submit = () => {
         Address: address.value
     });
     localStorage.setItem("tableRow", JSON.stringify(arr));
+
 
     // full name 
     if (fullNameRegix === true) {
@@ -137,6 +166,7 @@ login = () => {
     userName.value = "";
     password.value = "";
 }
+
 
 
 // // '.tbl-content' consumed little space for vertical scrollbar, scrollbar width depend on browser/os/platfrom. Here calculate the scollbar width .

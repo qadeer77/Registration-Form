@@ -1,8 +1,8 @@
-let tableRow = document.getElementById("tableRow");
-let arr = JSON.parse(localStorage.getItem("tableRow") || "[]");
-console.log(arr)
-
+let arr = [];
 submit = () => {
+
+
+
     // full name 
     let fullName = document.getElementById("fullName");
     let span = document.getElementById("span");

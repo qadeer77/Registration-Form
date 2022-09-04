@@ -1,5 +1,7 @@
 let tableRow = document.getElementById("tableRow");
-let arr = [];
+let arr = JSON.parse(localStorage.getItem("tableRow") || "[]");
+console.log(arr)
+
 submit = () => {
     // full name 
     let fullName = document.getElementById("fullName");
@@ -36,32 +38,16 @@ submit = () => {
     let span6 = document.getElementById("span6");
     let addressRegex = /^\s*$/.test(address.value);
 
-        arr.push({
-            Name: fullName.value,
-            Fathername: fatherName.value,
-            Email: email.value,
-            Phone: phone.value,
-            CNIC: cnic.value,
-            Dateofbirth: date.value,
-            Address: address.value
-        });
-    localStorage.setItem("Students", JSON.stringify(arr));
-    
-        
-
-
-    
-
-    // let row = `
-    //     <tr>${arr.}</tr>
-    //     <tr>${fatherName.value}</tr>
-    //     <tr>${email.value}</tr>
-    //     <tr>${phone.value}</tr>
-    //     <tr>${cnic.value}</tr>
-    //     <tr>${date.value}</tr>
-    //     <tr>${address.value}</tr>
-    // `
-    
+    arr.push({
+        Name: fullName.value,
+        Fathername: fatherName.value,
+        Email: email.value,
+        Phone: phone.value,
+        CNIC: cnic.value,
+        Dateofbirth: date.value,
+        Address: address.value
+    });
+    localStorage.setItem("tableRow", JSON.stringify(arr));
 
     // full name 
     if (fullNameRegix === true) {

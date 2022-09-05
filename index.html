@@ -32,7 +32,7 @@
         <div class="container">
             <!-- ist row -->
             <div class="row">
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                     <div class="form">
                         <form action="">
                             <label for="#">Full Name</label> <br>
@@ -41,10 +41,10 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                     <div class="form1">
                         <form action="">
-                            <label for="#">Father Name</label> <br>
+                            <label id="label1" for="#">Father Name</label> <br>
                             <input id="fatherName" type="text" placeholder="Father name" required="required"> <br>
                             <span id="span1"></span>
                         </form>
@@ -53,20 +53,21 @@
             </div>
             <!-- 2nd row -->
             <div class="row">
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                     <div class="form2">
                         <form action="">
                             <label for="#">Email</label> <br>
-                            <input id="email" type="text" placeholder="Email" required="required"> <br>
+                            <input id="email" type="email" placeholder="Email" required="required"> <br>
                             <span id="span2"></span>
                         </form>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                     <div class="form3">
                         <form action="">
-                            <label for="#">Phone</label> <br>
-                            <input id="phone" type="text" placeholder="Phone" required="required"> <br>
+                            <label id="label1" for="#">Phone</label> <br>
+                            <input id="phone" class="fatherName" type="text" placeholder="Phone" required="required">
+                            <br>
                             <span id="span3"></span>
                         </form>
                     </div>
@@ -75,7 +76,7 @@
 
             <!-- 3rd row -->
             <div class="row">
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                     <div class="form4">
                         <form action="">
                             <label for="#">CNIC</label> <br>
@@ -84,11 +85,11 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                     <div class="form5">
                         <form action="">
-                            <label for="#">Date of birth</label> <br>
-                            <input id="date" type="date" required="required"> <br>
+                            <label id="label1" for="#">Date of birth</label> <br>
+                            <input id="date" class="fatherName" type="date" required="required"> <br>
                             <span id="span5"></span>
                         </form>
                     </div>
@@ -100,7 +101,7 @@
                 <div class="col">
                     <div class="form6">
                         <form action="">
-                            <label for="#">Address</label> <br>
+                            <label id="label2" for="#">Address</label> <br>
                             <textarea id="address" required="required" name="" id="" cols="" rows=""
                                 placeholder="Address"></textarea> <br>
                             <span id="span6"></span>

@@ -323,3 +323,98 @@ body {
     position: relative;
     left: -5px;
 }
+
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .header img {
+        position: relative;
+        left: 80px;
+        width: 200px;
+    }
+
+    #qadeer550 {
+        position: relative;
+        left: 70px;
+        top: 60px;
+        font-size: 20px;
+    }
+
+    .header p {
+        position: relative;
+        left: 90px;
+        top: 60px;
+        font-size: 12px;
+    }
+
+    #hr1 {
+        width: 340px;
+    }
+
+    .form label {
+        position: relative;
+        left: 0px;
+    }
+
+    .form input {
+        position: relative;
+        left: 0px;
+        width: 340px;
+    }
+
+    #label1 {
+        position: relative;
+        top: 10px;
+    }
+
+    #fatherName {
+        position: relative;
+        top: 10px;
+        width: 340px;
+    }
+
+    .fatherName {
+        position: relative;
+        top: 10px;
+        width: 340px !important;
+    }
+
+    .form2 label {
+        position: relative;
+        left: 0px;
+    }
+
+    .form2 input {
+        position: relative;
+        left: 0px;
+        width: 340px;
+    }
+
+    .form4 label {
+        position: relative;
+        left: 0px;
+    }
+
+    .form4 input {
+        position: relative;
+        left: 0px;
+        width: 340px;
+    }
+
+    #address {
+        position: relative;
+        left: 0px;
+        width: 340px;
+    }
+
+    #label2 {
+        position: relative;
+        left: 0px;
+    }
+
+    .button button {
+        position: relative;
+        left: 0px;
+        width: 340px;
+    }
+}

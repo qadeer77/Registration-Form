@@ -16,17 +16,21 @@ if (tr !== null) {
                 <td>${arr[i][key]} <br> </td>
                     `
             }
-            row += `<i onclick="delete1(${arr.length});" id="icon1" class="fa-solid fa-trash"></i></tr>`;
+            row += `</tr>`;
             tr.innerHTML += row
         }
     }
     loadAll();
 }
 
-delete1 = (i) => {
-    console.log(i);
-    arr.splice(i, 1);
-}
+/* <i onclick="delete1(${arr.length});" id="icon1" class="fa-solid fa-trash"></i> */
+
+// delete1 = (i) => {
+//     arr.splice(i, 1);
+//     // localStorage.setItem("todo-list", JSON.stringify(arr));
+//     event.target.parentNode.lastChild.remove();
+//     // loadAll();
+// }
 
 
 

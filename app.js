@@ -10,24 +10,24 @@ if (tr !== null) {
     loadAll = () => {
         tr.innerHTML = " ";
         for (let i = 0; i < arr.length; i++) {
-            for (let key in arr) {
-                let row = `
-                    <tr>
-                    <td>${arr[i].Name} <br> <i onclick="delete1();" id="icon1" class="fa-solid fa-trash"></i> <i id="icon2" class="fa-solid fa-pen-to-square"></i></td>
-                    <td>${arr[i].Fathername}<br> <i onclick="delete1();" id="icon1" class="fa-solid fa-trash"></i> <i id="icon2" class="fa-solid fa-pen-to-square"></i></td>
-                    <td>${arr[i].Email} <br> <i onclick="delete1();" id="icon1" class="fa-solid fa-trash"></i> <i id="icon2" class="fa-solid fa-pen-to-square"></i></td>
-                    <td>${arr[i].Phone} <br> <i onclick="delete1);" id="icon1" class="fa-solid fa-trash"></i> <i id="icon2" class="fa-solid fa-pen-to-square"></i></td>
-                    <td>${arr[i].CNIC} <br> <i onclick="delete1();" id="icon1" class="fa-solid fa-trash"></i> <i id="icon2" class="fa-solid fa-pen-to-square"></i></td>
-                    <td>${arr[i].Dateofbirth} <br> <i onclick="delete1();" id="icon1" class="fa-solid fa-trash"></i> <i id="icon2" class="fa-solid fa-pen-to-square"></i></td>
-                    <td>${arr[i].Address}<br> <i onclick="delete1();" id="icon1" class="fa-solid fa-trash"></i> <i id="icon2" class="fa-solid fa-pen-to-square"></i></td>
-                    </tr>
+            let row = "<tr>";
+            for (let key in arr[i]) {
+                row += `
+                <td>${arr[i][key]} <br> </td>
                     `
-                tr.innerHTML += row
             }
+            row += `<i onclick="delete1(${arr.length});" id="icon1" class="fa-solid fa-trash"></i></tr>`;
+            tr.innerHTML += row
         }
     }
     loadAll();
 }
+
+delete1 = (i) => {
+    console.log(i);
+    arr.splice(i, 1);
+}
+
 
 
 submit = () => {
@@ -65,18 +65,18 @@ submit = () => {
     let address = document.getElementById("address");
     let span6 = document.getElementById("span6");
     let addressRegex = /^\s*$/.test(address.value);
-
-    arr.push({
-        Name: fullName.value,
-        Fathername: fatherName.value,
-        Email: email.value,
-        Phone: phone.value,
-        CNIC: cnic.value,
-        Dateofbirth: date.value,
-        Address: address.value
-    });
+    var ir;
+    arr.push(
+        ir = {
+            Name: fullName.value,
+            Fathername: fatherName.value,
+            Email: email.value,
+            Phone: phone.value,
+            CNIC: cnic.value,
+            Dateofbirth: date.value,
+            Address: address.value
+        });
     localStorage.setItem("tableRow", JSON.stringify(arr));
-
 
     // full name 
     if (fullNameRegix === true) {

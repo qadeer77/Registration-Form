@@ -13,7 +13,7 @@ if (tr !== null) {
             let row = "<tr>";
             for (let key in arr[i]) {
                 row += `
-                <td>${arr[i][key]} <br> </td>
+                <td class="td">${arr[i][key]}</td>
                     `
             }
             row += `</tr>`;
@@ -74,11 +74,11 @@ submit = () => {
         ir = {
             Name: fullName.value,
             Fathername: fatherName.value,
-            Email: email.value,
+            Address: address.value,
             Phone: phone.value,
             CNIC: cnic.value,
             Dateofbirth: date.value,
-            Address: address.value
+            Email: email.value
         });
     localStorage.setItem("tableRow", JSON.stringify(arr));
 

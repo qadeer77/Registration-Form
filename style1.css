@@ -194,3 +194,10 @@ body {
     position: relative;
     top: -20px;
 }
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .login-box {
+        width: 350px;
+    }
+}

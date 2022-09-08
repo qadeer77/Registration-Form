@@ -32,6 +32,12 @@ if (tr !== null) {
 //     // loadAll();
 // }
 
+const filterData = arr.filter(function (data){
+    if (data.Dateofbirth > "1971"){
+        return data;
+    }
+})
+console.log(filterData)
 
 
 submit = () => {
